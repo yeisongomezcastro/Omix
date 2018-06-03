@@ -19,8 +19,8 @@ public class MedicamentoEntidad {
 	@Column(name = "Medicamento") 	
 	private String Medicamento;
 	
-	@Column(name = "Presentacion") 	
-	private double Presentacion;
+	@Column(name = "ConcentracionMedicamento") 	
+	private double ConcentracionMedicamento;
 	
 	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idUnidadMedida")
@@ -68,12 +68,12 @@ public class MedicamentoEntidad {
 		Medicamento = medicamento;
 	}
 
-	public double getPresentacion() {
-		return Presentacion;
+	public double getConcentracionMedicamento() {
+		return ConcentracionMedicamento;
 	}
 
-	public void setPresentacion(double presentacion) {
-		Presentacion = presentacion;
+	public void setConcentracionMedicamento(double concentracionMedicamento) {
+		ConcentracionMedicamento = concentracionMedicamento;
 	}
 
 	public double getConcentracionMadre() {

@@ -83,8 +83,6 @@ public class PreparacionEntidad {
 		Dosis = dosis;
 	}
 	
-	
-
 	public double getVolumenVehiculo() {
 		return VolumenVehiculo;
 	}
