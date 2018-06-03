@@ -5,7 +5,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 
@@ -36,7 +35,7 @@ public class MedicamentoEntidad {
 	@Column(name = "MedidaEstabilidad")
 	private String MedidaEstabilidad; //horas, días, semanas
 	
-	@ManyToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idVehiculo")
 	private VehiculoEntidad vehiculo; 
 	

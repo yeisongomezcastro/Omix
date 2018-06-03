@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity(name="Preparacion")
 
@@ -22,7 +21,7 @@ public class PreparacionEntidad {
 	@JoinColumn (name = "idPaciente")
 	private PacienteEntidad paciente;
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idUbicacion")
 	private UbicacionEntidad ubicacion;
 	
@@ -39,6 +38,9 @@ public class PreparacionEntidad {
 	
 	@Column(nullable = false)
 	private double VolumenMedicamento;
+	
+	@Column(nullable = false)
+	private double VolumenVehiculo;
 	
 	@Column(nullable = false)
 	private double VolumenFinal;
@@ -79,6 +81,16 @@ public class PreparacionEntidad {
 
 	public void setDosis(double dosis) {
 		Dosis = dosis;
+	}
+	
+	
+
+	public double getVolumenVehiculo() {
+		return VolumenVehiculo;
+	}
+
+	public void setVolumenVehiculo(double volumenVehiculo) {
+		VolumenVehiculo = volumenVehiculo;
 	}
 
 	public double getVolumenMedicamento() {

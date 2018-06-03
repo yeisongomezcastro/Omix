@@ -1,5 +1,7 @@
 package com.omix.entity;
 
+import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.jvnet.hk2.config.DataType;
 
 @Entity (name="RecepcionMedicamento")
 
@@ -25,7 +26,7 @@ public class RecepcionMedicamentoEntidad {
 	private String	Lote;
 	
 	@Column(name = "FechaVencimientoMedicamento") 	
-	private DataType FechaVencimientoMedicamento;
+	private Date FechaVencimientoMedicamento;
 	
 	@Column(name = "Cantidad") 	
 	private int Cantidad;
@@ -34,6 +35,14 @@ public class RecepcionMedicamentoEntidad {
 	@JoinColumn (name = "idLaboratorio")
 	private LaboratorioEntidad laboratorio;
 	
+
+	public Date getFechaVencimientoMedicamento() {
+		return FechaVencimientoMedicamento;
+	}
+
+	public void setFechaVencimientoMedicamento(Date fechaVencimientoMedicamento) {
+		FechaVencimientoMedicamento = fechaVencimientoMedicamento;
+	}
 
 	public int getId() {
 		return id;
@@ -52,13 +61,6 @@ public class RecepcionMedicamentoEntidad {
 		Lote = lote;
 	}
 
-	public DataType getFechaVencimientoMedicamento() {
-		return FechaVencimientoMedicamento;
-	}
-
-	public void setFechaVencimientoMedicamento(DataType fechaVencimientoMedicamento) {
-		FechaVencimientoMedicamento = fechaVencimientoMedicamento;
-	}
 
 	public int getCantidad() {
 		return Cantidad;

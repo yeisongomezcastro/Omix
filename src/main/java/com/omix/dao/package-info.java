@@ -7,4 +7,4 @@
  */
 package com.omix.dao;
 
-// para definir los metodos de la persistencia
+// para definir los métodos de la persistencia
