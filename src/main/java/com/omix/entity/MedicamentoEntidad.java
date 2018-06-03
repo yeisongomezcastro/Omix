@@ -6,7 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+
 
 @Entity(name="Medicamento")
 
@@ -22,7 +23,7 @@ public class MedicamentoEntidad {
 	@Column(name = "Presentacion") 	
 	private double Presentacion;
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idUnidadMedida")
 	private UnidadMedidaEntidad unidadMedida;
 	
@@ -39,7 +40,7 @@ public class MedicamentoEntidad {
 	@JoinColumn (name = "idVehiculo")
 	private VehiculoEntidad vehiculo; 
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idTipoMedicamento")
 	private TipoMedicamentoEntidad TipoMedicamento;
 	

@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity(name="Preparacion")
@@ -17,7 +18,7 @@ public class PreparacionEntidad {
 	@Column(nullable = false)
 	private int id;
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idPaciente")
 	private PacienteEntidad paciente;
 	
@@ -25,14 +26,14 @@ public class PreparacionEntidad {
 	@JoinColumn (name = "idUbicacion")
 	private UbicacionEntidad ubicacion;
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idMedicamento")
 	private MedicamentoEntidad medicamento;
 	
 	@Column(nullable = false)
 	private double Dosis;
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idVehiculo")
 	private VehiculoEntidad vehiculo;
 	
@@ -45,7 +46,7 @@ public class PreparacionEntidad {
 	@Column(nullable = false)
 	private double ConcentracionMezcla;
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idViaAdministracion")
 	private ViaAdministracionEntidad viaAdministracion;
 	
@@ -58,7 +59,7 @@ public class PreparacionEntidad {
 	@Column(nullable = false)
 	private Date FechaVencimiento;
 	
-	@OneToMany (cascade = {CascadeType.PERSIST})
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	@JoinColumn (name = "idUsuario")
 	private UsuarioEntidad usuario;
 	
