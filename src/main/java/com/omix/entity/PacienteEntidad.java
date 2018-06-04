@@ -11,8 +11,8 @@ public class PacienteEntidad {
 	@Column(name = "id")
 	private int id;
 
-	@Column(name = "Nombre") 	
-	private String Nombre;
+	@Column(name = "Paciente") 	
+	private String Paciente;
 
 	public int getId() {
 		return id;
@@ -22,13 +22,15 @@ public class PacienteEntidad {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return Nombre;
+	public String getPaciente() {
+		return Paciente;
 	}
 
-	public void setNombre(String nombre) {
-		Nombre = nombre;
+	public void setPaciente(String paciente) {
+		Paciente = paciente;
 	}
+	
+	
 	
 }
 	

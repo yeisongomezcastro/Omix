@@ -12,14 +12,11 @@ public class VehiculoEntidad {
 	@Column(name = "id")
 	private String id;
 
-	@Column(name = "vehiculo") 	
-	private String vehiculo;  
+	@Column(name = "Diluente") 	
+	private String Diluente;  
 	
 	@Column(name = "VolumenFinal") 	
-	private String VolumenFinal;
-	
-	@Column(name = "Concentracion") 	
-	private double Concentracion;
+	private int VolumenFinal;
 
 	public String getId() {
 		return id;
@@ -29,30 +26,23 @@ public class VehiculoEntidad {
 		this.id = id;
 	}
 
-	public String getVehiculo() {
-		return vehiculo;
+	public String getDiluente() {
+		return Diluente;
 	}
 
-	public void setVehiculo(String vehiculo) {
-		this.vehiculo = vehiculo;
+	public void setDiluente(String diluente) {
+		Diluente = diluente;
 	}
 
-	public String getVolumenFinal() {
+	public int getVolumenFinal() {
 		return VolumenFinal;
 	}
 
-	public void setVolumenFinal(String volumenFinal) {
+	public void setVolumenFinal(int volumenFinal) {
 		VolumenFinal = volumenFinal;
 	}
-
-	public double getConcentracion() {
-		return Concentracion;
-	}
-
-	public void setConcentracion(double concentracion) {
-		Concentracion = concentracion;
-	}
-
+	
+	
 
 	//El vehículo es el medio en que se diluye el medicamento (dextrosa, salino, agua para inyección y lactato de ringer)
 	

@@ -15,6 +15,7 @@ public class ViaAdministracionEntidad {
 	@Column(name = "ViaAdministracion") 	
 	private String ViaAdministracion;
 
+
 	public String getId() {
 		return id;
 	}

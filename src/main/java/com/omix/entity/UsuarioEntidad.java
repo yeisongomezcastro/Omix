@@ -20,8 +20,6 @@ public class UsuarioEntidad {
 	
 	@Column(name = "Contrasena") 	
 	private String Contrasena;
-	
-	
 
 	public int getId() {
 		return id;

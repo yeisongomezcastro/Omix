@@ -5,96 +5,151 @@ import java.util.Date;
 public class PreparacionDTO {
 	
 	private int idPreparacion;
-	private static final String Paciente = "Paciente";
-	private static final String Ubicacion ="Ubicacion";
-	private static final String Medicamento = "Medicamento";
+	private PacienteDTO pacienteDTO;
+	private UbicacionDTO ubicacionDTO;
+	private MedicamentoDTO medicamentoDTO;
 	private double dosis;
-	private static final String Vehiculo ="Vehiculo";
+	private ViaAdministracionDTO viaAdministracionDTO;
+	private VehiculoDTO vehiculo;
 	private double VolumenMedicamento;
 	private double VolumenFinal;
 	private double ConcentracionMezcla;
-	private static final String TipoMedicamento ="TipoMedicamento"; //Para la identificación del lote
+	private String TipoMedicamento; //Para la identificación del lote
 	private Date FechaElaboracion;
 	private Date FechaVencimiento;
-	private static final String Usuario ="Usuario";
-	private static final String ViaAdministracion ="ViaAdministracion";
+	private String Usuario;
 	
-	
-	public PreparacionDTO(int idPreparacion, double dosis, double volumenMedicamento, double volumenFinal,
-			double concentracionMezcla, Date fechaElaboracion, Date fechaVencimiento) {
+	public PreparacionDTO(int idPreparacion, PacienteDTO pacienteDTO, UbicacionDTO ubicacionDTO,
+			MedicamentoDTO medicamentoDTO, double dosis, ViaAdministracionDTO viaAdministracionDTO,
+			VehiculoDTO vehiculo, double volumenMedicamento, double volumenFinal, double concentracionMezcla,
+			String tipoMedicamento, Date fechaElaboracion, Date fechaVencimiento, String usuario) {
 		super();
 		this.idPreparacion = idPreparacion;
+		this.pacienteDTO = pacienteDTO;
+		this.ubicacionDTO = ubicacionDTO;
+		this.medicamentoDTO = medicamentoDTO;
 		this.dosis = dosis;
+		this.viaAdministracionDTO = viaAdministracionDTO;
+		this.vehiculo = vehiculo;
 		VolumenMedicamento = volumenMedicamento;
 		VolumenFinal = volumenFinal;
 		ConcentracionMezcla = concentracionMezcla;
+		TipoMedicamento = tipoMedicamento;
 		FechaElaboracion = fechaElaboracion;
 		FechaVencimiento = fechaVencimiento;
+		Usuario = usuario;
 	}
-	
-	
+
 	public int getIdPreparacion() {
 		return idPreparacion;
 	}
+
 	public void setIdPreparacion(int idPreparacion) {
 		this.idPreparacion = idPreparacion;
 	}
+
+	public PacienteDTO getPacienteDTO() {
+		return pacienteDTO;
+	}
+
+	public void setPacienteDTO(PacienteDTO pacienteDTO) {
+		this.pacienteDTO = pacienteDTO;
+	}
+
+	public UbicacionDTO getUbicacionDTO() {
+		return ubicacionDTO;
+	}
+
+	public void setUbicacionDTO(UbicacionDTO ubicacionDTO) {
+		this.ubicacionDTO = ubicacionDTO;
+	}
+
+	public MedicamentoDTO getMedicamentoDTO() {
+		return medicamentoDTO;
+	}
+
+	public void setMedicamentoDTO(MedicamentoDTO medicamentoDTO) {
+		this.medicamentoDTO = medicamentoDTO;
+	}
+
 	public double getDosis() {
 		return dosis;
 	}
+
 	public void setDosis(double dosis) {
 		this.dosis = dosis;
 	}
+
+	public ViaAdministracionDTO getViaAdministracionDTO() {
+		return viaAdministracionDTO;
+	}
+
+	public void setViaAdministracionDTO(ViaAdministracionDTO viaAdministracionDTO) {
+		this.viaAdministracionDTO = viaAdministracionDTO;
+	}
+
+	public VehiculoDTO getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(VehiculoDTO vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+
 	public double getVolumenMedicamento() {
 		return VolumenMedicamento;
 	}
+
 	public void setVolumenMedicamento(double volumenMedicamento) {
 		VolumenMedicamento = volumenMedicamento;
 	}
+
 	public double getVolumenFinal() {
 		return VolumenFinal;
 	}
+
 	public void setVolumenFinal(double volumenFinal) {
 		VolumenFinal = volumenFinal;
 	}
+
 	public double getConcentracionMezcla() {
 		return ConcentracionMezcla;
 	}
+
 	public void setConcentracionMezcla(double concentracionMezcla) {
 		ConcentracionMezcla = concentracionMezcla;
 	}
+
+	public String getTipoMedicamento() {
+		return TipoMedicamento;
+	}
+
+	public void setTipoMedicamento(String tipoMedicamento) {
+		TipoMedicamento = tipoMedicamento;
+	}
+
 	public Date getFechaElaboracion() {
 		return FechaElaboracion;
 	}
+
 	public void setFechaElaboracion(Date fechaElaboracion) {
 		FechaElaboracion = fechaElaboracion;
 	}
+
 	public Date getFechaVencimiento() {
 		return FechaVencimiento;
 	}
+
 	public void setFechaVencimiento(Date fechaVencimiento) {
 		FechaVencimiento = fechaVencimiento;
 	}
-	public static String getPaciente() {
-		return Paciente;
-	}
-	public static String getUbicacion() {
-		return Ubicacion;
-	}
-	public static String getMedicamento() {
-		return Medicamento;
-	}
-	public static String getVehiculo() {
-		return Vehiculo;
-	}
-	public static String getTipomedicamento() {
-		return TipoMedicamento;
-	}
-	public static String getUsuario() {
+
+	public String getUsuario() {
 		return Usuario;
 	}
-	public static String getViaadministracion() {
-		return ViaAdministracion;
+
+	public void setUsuario(String usuario) {
+		Usuario = usuario;
 	}
 	
 
