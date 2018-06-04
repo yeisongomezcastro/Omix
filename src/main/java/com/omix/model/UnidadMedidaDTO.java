@@ -1,8 +1,7 @@
 package com.omix.model;
 
 public class UnidadMedidaDTO {
-<<<<<<< HEAD
-	
+
 	private int idUnidadMedida;
 	private String UnidadMedida;
 	private String Abreviatura;
@@ -21,11 +20,6 @@ public class UnidadMedidaDTO {
 	public void setIdUnidadMedida(int idUnidadMedida) {
 		this.idUnidadMedida = idUnidadMedida;
 	}
-=======
-
-	private String UnidadMedida;
-	private String Abreviatura;
->>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
 
 	public String getUnidadMedida() {
 		return UnidadMedida;
@@ -42,12 +36,8 @@ public class UnidadMedidaDTO {
 	public void setAbreviatura(String abreviatura) {
 		Abreviatura = abreviatura;
 	}
-<<<<<<< HEAD
 	
 	
-	
-	
-=======
->>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
+
 
 }
