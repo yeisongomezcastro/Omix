@@ -1,6 +1,7 @@
 package com.omix.model;
 
 public class VehiculoDTO {
+<<<<<<< HEAD
 	
 	private int idVehiculo;
 	private String Diluente;
@@ -38,5 +39,35 @@ public class VehiculoDTO {
 	}
 	
 	
+=======
+
+	private String vehiculo;
+	private String VolumenFinal;
+	private double Concentracion;
+
+	public String getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(String vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+
+	public String getVolumenFinal() {
+		return VolumenFinal;
+	}
+
+	public void setVolumenFinal(String volumenFinal) {
+		VolumenFinal = volumenFinal;
+	}
+
+	public double getConcentracion() {
+		return Concentracion;
+	}
+
+	public void setConcentracion(double concentracion) {
+		Concentracion = concentracion;
+	}
+>>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
 
 }

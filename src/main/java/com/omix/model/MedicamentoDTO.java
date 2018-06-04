@@ -10,6 +10,7 @@ public class MedicamentoDTO {
 	private int Estabilidad;
 	private String MedidaEstabilidad;
 	private VehiculoDTO vehiculoDTO;
+<<<<<<< HEAD
 	private String TipoMedicamento;
 	private String Almacenamiento;
 	private String CadenaDeFrio;
@@ -17,6 +18,15 @@ public class MedicamentoDTO {
 	public MedicamentoDTO(int idMedicamento, String medicamento, double concentracionMedicamento,
 			UnidadMedidaDTO unidadMedidaDTO, double concentracionMadre, int estabilidad, String medidaEstabilidad,
 			VehiculoDTO vehiculoDTO, String tipoMedicamento, String almacenamiento, String cadenaDeFrio) {
+=======
+	private String Almacenamiento;
+	private String CadenaDeFrio;
+
+	
+	public MedicamentoDTO(int idMedicamento, String medicamento, double concentracionMedicamento,
+			UnidadMedidaDTO unidadMedidaDTO, double concentracionMadre, int estabilidad, String medidaEstabilidad,
+			VehiculoDTO vehiculoDTO, String almacenamiento, String cadenaDeFrio) {
+>>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
 		super();
 		IdMedicamento = idMedicamento;
 		Medicamento = medicamento;
@@ -26,11 +36,18 @@ public class MedicamentoDTO {
 		Estabilidad = estabilidad;
 		MedidaEstabilidad = medidaEstabilidad;
 		this.vehiculoDTO = vehiculoDTO;
+<<<<<<< HEAD
 		TipoMedicamento = tipoMedicamento;
 		Almacenamiento = almacenamiento;
 		CadenaDeFrio = cadenaDeFrio;
 	}
 
+=======
+		Almacenamiento = almacenamiento;
+		CadenaDeFrio = cadenaDeFrio;
+	}
+	
+>>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
 	public int getIdMedicamento() {
 		return IdMedicamento;
 	}
@@ -54,6 +71,7 @@ public class MedicamentoDTO {
 	public void setConcentracionMedicamento(double concentracionMedicamento) {
 		ConcentracionMedicamento = concentracionMedicamento;
 	}
+<<<<<<< HEAD
 
 	public UnidadMedidaDTO getUnidadMedidaDTO() {
 		return unidadMedidaDTO;
@@ -63,6 +81,14 @@ public class MedicamentoDTO {
 		this.unidadMedidaDTO = unidadMedidaDTO;
 	}
 
+=======
+	public UnidadMedidaDTO getUnidadMedidaDTO() {
+		return unidadMedidaDTO;
+	}
+	public void setUnidadMedidaDTO(UnidadMedidaDTO unidadMedidaDTO) {
+		this.unidadMedidaDTO = unidadMedidaDTO;
+	}
+>>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
 	public double getConcentracionMadre() {
 		return ConcentracionMadre;
 	}
@@ -86,6 +112,7 @@ public class MedicamentoDTO {
 	public void setMedidaEstabilidad(String medidaEstabilidad) {
 		MedidaEstabilidad = medidaEstabilidad;
 	}
+<<<<<<< HEAD
 
 	public VehiculoDTO getVehiculoDTO() {
 		return vehiculoDTO;
@@ -103,6 +130,14 @@ public class MedicamentoDTO {
 		TipoMedicamento = tipoMedicamento;
 	}
 
+=======
+	public VehiculoDTO getVehiculoDTO() {
+		return vehiculoDTO;
+	}
+	public void setVehiculoDTO(VehiculoDTO vehiculoDTO) {
+		this.vehiculoDTO = vehiculoDTO;
+	}
+>>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
 	public String getAlmacenamiento() {
 		return Almacenamiento;
 	}
@@ -118,5 +153,9 @@ public class MedicamentoDTO {
 	public void setCadenaDeFrio(String cadenaDeFrio) {
 		CadenaDeFrio = cadenaDeFrio;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 48d73c890fd2ae64a5e7c7ce5f30a0f8438fba8f
 	
 }
