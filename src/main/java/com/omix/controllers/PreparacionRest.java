@@ -1,7 +1,6 @@
 package com.omix.controllers;
 
 import java.util.List;
-
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -9,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,7 +36,7 @@ public class PreparacionRest {
 	}
 	
 	@Produces(MediaType.APPLICATION_JSON)
-	@RequestMapping(method = RequestMethod.GET, value = "/consultarpreparacion")
+	@RequestMapping(method = RequestMethod.GET, value = "/consultarpreparaciones")
 	public ResponseEntity<Object> consultarVehiculosParqueados() {
 		List<PreparacionEntidad> preparacionEntidadList;
 		try {
@@ -46,5 +46,19 @@ public class PreparacionRest {
 		}
 		return new ResponseEntity<>(preparacionEntidadList, HttpStatus.OK);
 	}
+	
+	
+	@RequestMapping(method = RequestMethod.GET,value = "/consultarpreparacionPorDocumento/{nroDocumento}")
+	public ResponseEntity<Object> consultarPreparacionPorDocumento(@PathVariable("nroDocumento") String nroDocumento) {
+		List<PreparacionEntidad> listaPreparacionEntidad;
+		try {
+			listaPreparacionEntidad = preparacionServicio.consultarPreparacionPorDocumento(nroDocumento);
+		} catch (OmixException e) {
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+		}
+		return new ResponseEntity<>(listaPreparacionEntidad, HttpStatus.OK);
+
+	}
+
 
 }

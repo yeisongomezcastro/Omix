@@ -26,4 +26,14 @@ public class PreparacionServicio implements IPreparacionServicio{
 		return preparacionRepository.findAll();
 	}
 
+	@Override
+	public List<PreparacionEntidad> consultarPreparacionPorDocumento(String nroDocumento) {
+		return preparacionRepository.consultarMedicamentoPorNombre(nroDocumento);
+	}
+
+	@Override
+	public PreparacionEntidad actualizarPreparacion(PreparacionEntidad preparacionEntidad) {
+		return preparacionRepository.save(preparacionEntidad);
+	}
+
 }

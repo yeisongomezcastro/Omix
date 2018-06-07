@@ -20,4 +20,19 @@ public class MedicamentoServicio implements IMedicamentoServicio{
 		return medicamentoRepository.findAll();
 	}
 
+	@Override
+	public MedicamentoEntidad guardarMedicamento(MedicamentoEntidad medicamentoEntidad) {
+		return medicamentoRepository.save(medicamentoEntidad);
+	}
+
+	@Override
+	public MedicamentoEntidad actualizarMedicamento(MedicamentoEntidad medicamentoEntidad) {
+		return medicamentoRepository.save(medicamentoEntidad);
+	}
+
+	@Override
+	public MedicamentoEntidad buscarMedicamentoPorNombre(String nombreMedicamento) {
+		return medicamentoRepository.consultarMedicamentoPorNombre(nombreMedicamento);
+	}
+
 }
