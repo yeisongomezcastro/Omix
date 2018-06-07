@@ -1,5 +1,6 @@
 package com.omix.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -9,62 +10,63 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity(name="Preparacion")
+@Entity(name = "Preparacion")
 
-public class PreparacionEntidad {
+public class PreparacionEntidad implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(nullable = false)
 	private int id;
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idPaciente")
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idPaciente")
 	private PacienteEntidad paciente;
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idUbicacion")
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idUbicacion")
 	private UbicacionEntidad ubicacion;
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idMedicamento")
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idMedicamento")
 	private MedicamentoEntidad medicamento;
-	
+
 	@Column(nullable = false)
 	private double Dosis;
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idVehiculo")
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idVehiculo")
 	private VehiculoEntidad vehiculo;
-	
+
 	@Column(nullable = false)
 	private double VolumenMedicamento;
-	
+
 	@Column(nullable = false)
 	private double VolumenVehiculo;
-	
+
 	@Column(nullable = false)
 	private double VolumenFinal;
-	
+
 	@Column(nullable = false)
 	private double ConcentracionMezcla;
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idViaAdministracion")
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idViaAdministracion")
 	private ViaAdministracionEntidad viaAdministracion;
-	
+
 	@Column(nullable = false)
-	private String Lote; //Lote de identificación de la producción
-	
+	private String Lote; // Lote de identificación de la producción
+
 	@Column(nullable = false)
 	private Date FechaElaboracion;
-	
+
 	@Column(nullable = false)
 	private Date FechaVencimiento;
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idUsuario")
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idUsuario")
 	private UsuarioEntidad usuario;
-	
 
 	public int getId() {
 		return id;
@@ -74,7 +76,30 @@ public class PreparacionEntidad {
 		this.id = id;
 	}
 
-	
+	public PacienteEntidad getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(PacienteEntidad paciente) {
+		this.paciente = paciente;
+	}
+
+	public UbicacionEntidad getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(UbicacionEntidad ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+
+	public MedicamentoEntidad getMedicamento() {
+		return medicamento;
+	}
+
+	public void setMedicamento(MedicamentoEntidad medicamento) {
+		this.medicamento = medicamento;
+	}
+
 	public double getDosis() {
 		return Dosis;
 	}
@@ -82,13 +107,13 @@ public class PreparacionEntidad {
 	public void setDosis(double dosis) {
 		Dosis = dosis;
 	}
-	
-	public double getVolumenVehiculo() {
-		return VolumenVehiculo;
+
+	public VehiculoEntidad getVehiculo() {
+		return vehiculo;
 	}
 
-	public void setVolumenVehiculo(double volumenVehiculo) {
-		VolumenVehiculo = volumenVehiculo;
+	public void setVehiculo(VehiculoEntidad vehiculo) {
+		this.vehiculo = vehiculo;
 	}
 
 	public double getVolumenMedicamento() {
@@ -99,12 +124,36 @@ public class PreparacionEntidad {
 		VolumenMedicamento = volumenMedicamento;
 	}
 
+	public double getVolumenVehiculo() {
+		return VolumenVehiculo;
+	}
+
+	public void setVolumenVehiculo(double volumenVehiculo) {
+		VolumenVehiculo = volumenVehiculo;
+	}
+
+	public double getVolumenFinal() {
+		return VolumenFinal;
+	}
+
+	public void setVolumenFinal(double volumenFinal) {
+		VolumenFinal = volumenFinal;
+	}
+
 	public double getConcentracionMezcla() {
 		return ConcentracionMezcla;
 	}
 
 	public void setConcentracionMezcla(double concentracionMezcla) {
 		ConcentracionMezcla = concentracionMezcla;
+	}
+
+	public ViaAdministracionEntidad getViaAdministracion() {
+		return viaAdministracion;
+	}
+
+	public void setViaAdministracion(ViaAdministracionEntidad viaAdministracion) {
+		this.viaAdministracion = viaAdministracion;
 	}
 
 	public String getLote() {
@@ -130,7 +179,13 @@ public class PreparacionEntidad {
 	public void setFechaVencimiento(Date fechaVencimiento) {
 		FechaVencimiento = fechaVencimiento;
 	}
-	
-	
-}
 
+	public UsuarioEntidad getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(UsuarioEntidad usuario) {
+		this.usuario = usuario;
+	}
+
+}

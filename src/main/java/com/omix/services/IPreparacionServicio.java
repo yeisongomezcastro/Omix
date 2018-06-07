@@ -1,11 +1,13 @@
 package com.omix.services;
 
 
+import java.util.List;
+
 import com.omix.entity.PreparacionEntidad;
-import com.omix.model.PreparacionDTO;
 
 public interface IPreparacionServicio {
 	
-	public PreparacionEntidad gurdarPreparacion(PreparacionDTO preparacionDTO);
+	public PreparacionEntidad gurdarPreparacion(PreparacionEntidad preparacionEntidad);
+	public List<PreparacionEntidad> consultarPreparacion();
 
 }
