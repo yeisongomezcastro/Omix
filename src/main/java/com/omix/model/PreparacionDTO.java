@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class PreparacionDTO {
 	
-	private int idPreparacion;
-	private PacienteDTO pacienteDTO;
-	private UbicacionDTO ubicacionDTO;
-	private MedicamentoDTO medicamentoDTO;
-	private double dosis;
-	private ViaAdministracionDTO viaAdministracionDTO;
-	private VehiculoDTO vehiculo;
+	 private int idPreparacion;
+	 private PacienteDTO pacienteDTO;
+	 private UbicacionDTO ubicacionDTO;
+	 private MedicamentoDTO medicamentoDTO;
+	 private double dosis;
+	 private ViaAdministracionDTO viaAdministracionDTO;
+	 private VehiculoDTO vehiculo;
 	private double VolumenMedicamento;
-	private double VolumenFinal;
+	 private double VolumenFinal;
 	private double ConcentracionMezcla;
 	private String TipoMedicamento; //Para la identificación del lote
 	private Date FechaElaboracion;

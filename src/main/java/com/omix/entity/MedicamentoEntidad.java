@@ -7,50 +7,49 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-
-@Entity(name="Medicamento")
+@Entity(name = "Medicamento")
 
 public class MedicamentoEntidad {
-	
+
 	@Id
-	@Column (name = "id")
+	@Column(name = "id")
 	private int id;
-	
-	@Column(name = "Medicamento") 	
+
+	@Column(name = "Medicamento")
 	private String Medicamento;
-	
-	@Column(name = "ConcentracionMedicamento") 	
+
+	@Column(name = "ConcentracionMedicamento")
 	private double ConcentracionMedicamento;
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idUnidadMedida")
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idUnidadMedida")
 	private UnidadMedidaEntidad unidadMedida;
-	
+
 	@Column(name = "ConcentracionMadre")
 	private double ConcentracionMadre;
-	
+
 	@Column(name = "Estabilidad")
-	private int Estabilidad; //cantidad en números
-	
+	private int Estabilidad; // cantidad en números
+
 	@Column(name = "MedidaEstabilidad")
-	private String MedidaEstabilidad; //horas, días, semanas
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idVehiculo")
-	private VehiculoEntidad vehiculo; 
-	
-	@ManyToOne (cascade = {CascadeType.PERSIST})
-	@JoinColumn (name = "idTipoMedicamento")
+	private String MedidaEstabilidad; // horas, días, semanas
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idVehiculo")
+	private VehiculoEntidad vehiculo;
+
+	@ManyToOne(cascade = { CascadeType.PERSIST })
+	@JoinColumn(name = "idTipoMedicamento")
 	private TipoMedicamentoEntidad TipoMedicamento;
-	
-	@Column(name = "ProtegerLuz") 	
+
+	@Column(name = "ProtegerLuz")
 	private String ProtegerLuz;
-	
-	@Column(name = "Refrigerar") 	
+
+	@Column(name = "Refrigerar")
 	private String Refrigerar;
-	
-	@Column(name = "Envase") 	
-	private String Envase; //Tipo de envase compatible pvc, propietileno, jeringa
+
+	@Column(name = "Envase")
+	private String Envase; // Tipo de envase compatible pvc, propietileno, jeringa
 
 	public int getId() {
 		return id;
@@ -76,6 +75,14 @@ public class MedicamentoEntidad {
 		ConcentracionMedicamento = concentracionMedicamento;
 	}
 
+	public UnidadMedidaEntidad getUnidadMedida() {
+		return unidadMedida;
+	}
+
+	public void setUnidadMedida(UnidadMedidaEntidad unidadMedida) {
+		this.unidadMedida = unidadMedida;
+	}
+
 	public double getConcentracionMadre() {
 		return ConcentracionMadre;
 	}
@@ -99,7 +106,23 @@ public class MedicamentoEntidad {
 	public void setMedidaEstabilidad(String medidaEstabilidad) {
 		MedidaEstabilidad = medidaEstabilidad;
 	}
-	
+
+	public VehiculoEntidad getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(VehiculoEntidad vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+
+	public TipoMedicamentoEntidad getTipoMedicamento() {
+		return TipoMedicamento;
+	}
+
+	public void setTipoMedicamento(TipoMedicamentoEntidad tipoMedicamento) {
+		TipoMedicamento = tipoMedicamento;
+	}
+
 	public String getProtegerLuz() {
 		return ProtegerLuz;
 	}
@@ -124,8 +147,4 @@ public class MedicamentoEntidad {
 		Envase = envase;
 	}
 
-	
 }
-
-
-
