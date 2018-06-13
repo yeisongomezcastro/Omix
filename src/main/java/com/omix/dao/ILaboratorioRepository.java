@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.omix.entity.LaboratorioEntidad;
 
 @Service
-@Repository("LaboratorioRepository")
+@Repository("ILaboratorioRepository")
 public interface ILaboratorioRepository extends JpaRepository<LaboratorioEntidad,Serializable>{
 	
 }
